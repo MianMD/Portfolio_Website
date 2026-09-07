@@ -24,10 +24,10 @@ const CLIENTS = [
 // ============================================================
 const PROJECTS = [
   {
-    title: "Project title",
-    role: "MOTION DESIGN",
-    desc: "Short description of the project goes here.",
-    embedUrl: null,
+    title: "GCCI Vote Appeal",
+    role: "MOTION DESIGN / EDIT",
+    desc: "A creative promotional video for GCCI, featuring AI-generated visuals, realistic voice-over, professional editing, and custom PSD animations.",
+    embedUrl: "https://player.vimeo.com/video/1224584285?h=aea9a2aa4d",
   },
   {
     title: "Project title",
