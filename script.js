@@ -21,6 +21,9 @@ const CLIENTS = [
 //               Vimeo:   https://player.vimeo.com/video/XXXXXXX
 //               YouTube: https://www.youtube.com/embed/XXXXXXXXXXX
 //             Leave as null to show a "coming soon" placeholder box.
+//   orientation: "landscape" (default, 16:9 — normal widescreen video)
+//                "portrait" (9:16 — vertical video, e.g. a Reel/Short)
+//                Set this to match the actual video or Vimeo will letterbox it.
 // ============================================================
 const PROJECTS = [
   {
@@ -28,24 +31,28 @@ const PROJECTS = [
     role: "MOTION DESIGN / EDIT",
     desc: "A creative promotional video for GCCI, featuring AI-generated visuals, realistic voice-over, professional editing, and custom PSD animations.",
     embedUrl: "https://player.vimeo.com/video/1224584285?h=aea9a2aa4d",
+    orientation: "portrait",
   },
   {
     title: "Project title",
     role: "VIDEO EDIT",
     desc: "Short description of the project goes here.",
     embedUrl: null,
+    orientation: "landscape",
   },
   {
     title: "Project title",
     role: "3D ANIMATION",
     desc: "Short description of the project goes here.",
     embedUrl: null,
+    orientation: "landscape",
   },
   {
     title: "Project title",
     role: "MOTION DESIGN / EDIT",
     desc: "Short description of the project goes here.",
     embedUrl: null,
+    orientation: "landscape",
   },
 ];
 
@@ -65,9 +72,12 @@ function renderProjects() {
     const media = p.embedUrl
       ? `<iframe src="${p.embedUrl}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${p.title}"></iframe>`
       : `<span class="project-card__placeholder">VIDEO LINK COMING SOON</span>`;
+    const mediaClass = p.orientation === "portrait"
+      ? "project-card__media project-card__media--portrait"
+      : "project-card__media";
     return `
       <article class="project-card">
-        <div class="project-card__media">${media}</div>
+        <div class="${mediaClass}">${media}</div>
         <p class="project-card__meta">${p.role}</p>
         <h3 class="project-card__title">${p.title}</h3>
         <p class="project-card__desc">${p.desc}</p>
