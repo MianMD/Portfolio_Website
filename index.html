@@ -3,94 +3,319 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio — 3D Animator, Motion Designer &amp; Video Editor</title>
-<meta name="description" content="Creative 3D Animator, Motion Designer, and Video Editor with 3 years of experience. Currently Motion Designer &amp; Video Editor for Islamabad United.">
-<link rel="preconnect" href="https://api.fontshare.com">
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,700&display=swap">
+<title>Muhammad Mohiuddeen — Motion Designer, Video Editor, 3D Animator</title>
+<meta name="description" content="Portfolio of Muhammad Mohiuddeen — Motion Designer, Video Editor and 3D Animator based in Pakistan, working with agencies and brands including Islamabad United.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAV -->
-<header class="nav">
-  <a href="#top" class="nav__mark">MIAN</a>
-  <nav class="nav__links">
-    <a href="#work">WORK</a>
-    <a href="#about">ABOUT</a>
-    <a href="#contact">CONTACT</a>
+<header class="site-header">
+  <a href="#top" class="mark">M. Mohiuddeen</a>
+  <nav class="main-nav">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
   </nav>
+  <a href="#contact" class="header-cta">Start a project</a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
-<!-- HERO -->
-<section id="top" class="hero">
-  <p class="hero__eyebrow">3 YEARS — CURRENTLY AT ISLAMABAD UNITED</p>
-  <h1 class="hero__title">
-    Video Editor.<br>
-    Motion Designer.<br>
-    3D Animator.
-  </h1>
-  <p class="hero__sub">Creative work for brands and agencies who need motion to carry the message.</p>
-  <div class="hero__cta">
-    <a href="#work" class="btn btn--primary">View Work</a>
-    <a href="#contact" class="btn btn--secondary">Get in Touch</a>
-  </div>
-</section>
+<main id="top">
 
-<!-- STATS -->
-<section class="stats" aria-label="Experience summary">
-  <div class="stat">
-    <p class="stat__number">3+</p>
-    <p class="stat__label">YEARS EXPERIENCE</p>
-  </div>
-  <div class="stat">
-    <p class="stat__number">5+</p>
-    <p class="stat__label">BRAND PARTNERSHIPS</p>
-  </div>
-  <div class="stat">
-    <p class="stat__number">3</p>
-    <p class="stat__label">DISCIPLINES — EDIT / MOTION / 3D</p>
-  </div>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Gujranwala, Pakistan — working with agencies worldwide</p>
+      <h1 class="hero-title">
+        Motion, cut, and dimension —<br>
+        told in <em>frames</em> that hold attention.
+      </h1>
+      <p class="hero-sub">
+        I'm Muhammad Mohiuddeen. I design motion graphics, edit video, and build 3D animation
+        for agencies and brands who need work that survives a scroll.
+      </p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">See the work</a>
+        <a href="https://behance.net/mianmd" class="btn btn-ghost" target="_blank" rel="noopener">Behance ↗</a>
+      </div>
+    </div>
+  </section>
 
-<!-- CLIENT MARQUEE -->
-<section class="marquee" aria-label="Clients">
-  <p class="marquee__label">WORKED WITH</p>
-  <div class="marquee__track" id="marqueeTrack">
-    <!-- duplicated in JS for seamless loop -->
-  </div>
-</section>
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="stat">
+      <span class="stat-num">3+</span>
+      <span class="stat-label">Years in the craft</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">4</span>
+      <span class="stat-label">Studios &amp; agencies</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">7</span>
+      <span class="stat-label">Tools in daily use</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">01</span>
+      <span class="stat-label">Client at a time, done right</span>
+    </div>
+  </section>
 
-<!-- WORK -->
-<section id="work" class="work">
-  <p class="section__label">SELECTED WORK</p>
-  <div class="work__grid" id="workGrid">
-    <!-- populated by JS from the PROJECTS array in script.js -->
-  </div>
-</section>
+  <!-- CLIENT MARQUEE -->
+  <section class="marquee-section" aria-label="Clients">
+    <p class="marquee-label">Work delivered for</p>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Islamabad United</span>
+        <span>FICO Hi-Tech Private Limited</span>
+        <span>UCP — Gamescotch Studios</span>
+        <span>Kelash Animation</span>
+        <span>SabaSoft</span>
+        <span>Islamabad United</span>
+        <span>FICO Hi-Tech Private Limited</span>
+        <span>UCP — Gamescotch Studios</span>
+        <span>Kelash Animation</span>
+        <span>SabaSoft</span>
+      </div>
+    </div>
+  </section>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-  <p class="section__label">ABOUT</p>
-  <p class="about__text">
-    Creative 3D Animator, Motion Designer, and Video Editor with 3 years of experience.
-    Currently working as a Motion Designer and Video Editor for Islamabad United,
-    creating engaging digital content.
-  </p>
-</section>
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <h2 class="section-heading">What I do</h2>
+    <div class="services-list">
+      <div class="service-row">
+        <span class="service-index">01</span>
+        <h3 class="service-name">Motion Design</h3>
+        <p class="service-desc">Titles, kinetic type, brand stings, and social-first motion built to hold a thumb mid-scroll.</p>
+      </div>
+      <div class="service-row">
+        <span class="service-index">02</span>
+        <h3 class="service-name">Video Editing</h3>
+        <p class="service-desc">Match-day content, brand films, and short-form cutdowns — paced for the platform they'll live on.</p>
+      </div>
+      <div class="service-row">
+        <span class="service-index">03</span>
+        <h3 class="service-name">3D Animation</h3>
+        <p class="service-desc">Character rigging, game-ready animation, and rendered 3D built in Blender and Substance Painter.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <p class="section__label">CONTACT</p>
-  <a class="contact__link" href="mailto:miang4377@gmail.com">miang4377@gmail.com</a>
-  <a class="contact__link" href="tel:+923431432433">+92 343 1432433</a>
-  <a class="contact__link" href="https://www.linkedin.com/in/mianmd/" target="_blank" rel="noopener">LinkedIn ↗</a>
-</section>
+  <!-- WORK / PORTFOLIO -->
+  <section class="work" id="work">
+    <div class="work-header">
+      <h2 class="section-heading">Selected work</h2>
+      <p class="section-sub">Filter by category. Each project links out to Vimeo or YouTube.</p>
+    </div>
 
-<footer class="footer">
-  <p>© <span id="year"></span> — Built &amp; hosted free with GitHub + Vercel.</p>
+    <div class="filters" role="tablist" aria-label="Filter projects by category">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="motion">Motion Design</button>
+      <button class="filter-btn" data-filter="video">Video Editing</button>
+      <button class="filter-btn" data-filter="3d">3D Animation</button>
+    </div>
+
+    <div class="project-grid" id="project-grid">
+
+      <a href="#" class="project-card" data-category="video" data-swatch="1">
+        <div class="project-thumb">
+          <span class="project-play">▶</span>
+        </div>
+        <div class="project-meta">
+          <h3>Islamabad United — Match Day Cutdown</h3>
+          <p>Video Editing · Add your Vimeo/YouTube link</p>
+        </div>
+      </a>
+
+      <a href="#" class="project-card" data-category="motion" data-swatch="2">
+        <div class="project-thumb">
+          <span class="project-play">▶</span>
+        </div>
+        <div class="project-meta">
+          <h3>FICO Hi-Tech — Product Launch Stings</h3>
+          <p>Motion Design · Add your Vimeo/YouTube link</p>
+        </div>
+      </a>
+
+      <a href="#" class="project-card" data-category="3d" data-swatch="3">
+        <div class="project-thumb">
+          <span class="project-play">▶</span>
+        </div>
+        <div class="project-meta">
+          <h3>Gamescotch — Character Rig &amp; Animation</h3>
+          <p>3D Animation · Add your Vimeo/YouTube link</p>
+        </div>
+      </a>
+
+      <a href="#" class="project-card" data-category="3d" data-swatch="4">
+        <div class="project-thumb">
+          <span class="project-play">▶</span>
+        </div>
+        <div class="project-meta">
+          <h3>Kelash Animation — Short Episode</h3>
+          <p>3D Animation · Add your Vimeo/YouTube link</p>
+        </div>
+      </a>
+
+      <a href="#" class="project-card" data-category="motion" data-swatch="5">
+        <div class="project-thumb">
+          <span class="project-play">▶</span>
+        </div>
+        <div class="project-meta">
+          <h3>Social Campaign — Kinetic Type Set</h3>
+          <p>Motion Design · Add your Vimeo/YouTube link</p>
+        </div>
+      </a>
+
+      <a href="#" class="project-card" data-category="video" data-swatch="6">
+        <div class="project-thumb">
+          <span class="project-play">▶</span>
+        </div>
+        <div class="project-meta">
+          <h3>SabaSoft — Brand Film Edit</h3>
+          <p>Video Editing · Add your Vimeo/YouTube link</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-copy">
+        <h2 class="section-heading">About</h2>
+        <p>
+          Creative 3D animator, motion designer, and video editor with three years of
+          experience. Currently working as a Motion Designer and Video Editor at DikhaDe,
+          creating engaging digital content for Islamabad United and other brands.
+        </p>
+        <p>
+          Before that, three years across game studios in Lahore — rigging characters,
+          animating game levels, and producing 3D shorts — and a short stint in UI/UX,
+          which still shapes how I think about pacing and attention.
+        </p>
+      </div>
+      <div class="about-skills">
+        <h3 class="skills-heading">Tools</h3>
+        <ul class="skills-list">
+          <li>Premiere Pro</li>
+          <li>Blender</li>
+          <li>After Effects</li>
+          <li>CapCut</li>
+          <li>Substance Painter</li>
+          <li>Unity</li>
+          <li>Photoshop</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <h2 class="section-heading">Experience</h2>
+    <div class="timeline">
+
+      <div class="timeline-row">
+        <div class="timeline-date">March 2026 — Present</div>
+        <div class="timeline-body">
+          <h3>Motion Designer &amp; Video Editor</h3>
+          <p class="timeline-org">DikhaDe · Digital Marketing Agency, Gujranwala</p>
+          <p class="timeline-desc">Creative video editing and motion design for Islamabad United and other leading brands.</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-date">Dec 2021 — June 2023</div>
+        <div class="timeline-body">
+          <h3>3D Artist &amp; 3D Animator</h3>
+          <p class="timeline-org">UCP · Gamescotch Studios, Lahore</p>
+          <p class="timeline-desc">Game design, level creation, character animation, and game concepts, supporting publishing.</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-date">Nov 2019 — Dec 2021</div>
+        <div class="timeline-body">
+          <h3>3D Artist &amp; 3D Animator</h3>
+          <p class="timeline-org">SabaSoft · Games Studio, Lahore</p>
+          <p class="timeline-desc">3D art for game development and cartoon-style 3D animation for the Kelash Animation YouTube channel.</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-date">Sep 2019 — Nov 2019</div>
+        <div class="timeline-body">
+          <h3>UI/UX Designer</h3>
+          <p class="timeline-org">Preesoft · SaaS Agency, Lahore</p>
+          <p class="timeline-desc">Designed intuitive, user-friendly interfaces for mobile applications.</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-date">2015 — 2019</div>
+        <div class="timeline-body">
+          <h3>B.S. Software Engineering</h3>
+          <p class="timeline-org">Education</p>
+          <p class="timeline-desc">Software development, programming, database management, and problem-solving fundamentals.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="certificates">
+      <h3 class="skills-heading">Certificates</h3>
+      <ul class="cert-list">
+        <li>Blender 3D Modeling &amp; Rendering for Games &amp; Animation — Coursera</li>
+        <li>3D Character Rigging in Blender — Coursera</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2 class="section-heading">Let's work together</h2>
+    <p class="contact-sub">
+      Have a project in mind? Send the brief — I'll reply from here directly.
+    </p>
+
+    <form class="contact-form" id="contact-form">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label for="message">Project details</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send message</button>
+      <p class="form-note" id="form-note"></p>
+    </form>
+
+    <div class="contact-direct">
+      <a href="mailto:miang4377@gmail.com">miang4377@gmail.com</a>
+      <a href="tel:+923431432433">+92 343 1432433</a>
+      <a href="https://www.linkedin.com/in/mianmd/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://behance.net/mianmd" target="_blank" rel="noopener">Behance ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Muhammad Mohiuddeen</p>
+  <a href="#top">Back to top ↑</a>
 </footer>
 
 <script src="script.js"></script>
