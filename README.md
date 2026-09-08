@@ -1,48 +1,54 @@
-# Portfolio Website
+# Muhammad Mohiuddeen — Portfolio
 
-Plain HTML/CSS/JS — no build step, no dependencies to install. That means you can
-upload this exact folder to GitHub and deploy it, with nothing else to configure.
+A plain HTML/CSS/JS site — no build step, no framework. That means you can deploy it
+exactly as-is to GitHub + Vercel.
 
 ## Files
 
-- `index.html` — page structure and text content
-- `style.css` — all visual styling (colors, type, spacing — matches `DESIGN.md`)
-- `script.js` — client logos and the project list
-- `DESIGN.md` — the design system this site follows
+- `index.html` — all the page content
+- `styles.css` — all the styling
+- `script.js` — portfolio filter buttons, mobile menu, contact form
 
-## How to add your real content later
+## 1. Put it on GitHub
 
-Open `script.js` in GitHub (click the file, then the pencil/edit icon) or in any
-text editor.
+1. Create a new repository on GitHub (e.g. `portfolio`).
+2. Upload these three files (`index.html`, `styles.css`, `script.js`) to the repo —
+   either drag-and-drop them on the GitHub website ("Add file" → "Upload files"), or
+   use GitHub Desktop if you have it installed.
+3. Commit.
 
-**To add a project video:**
-1. Go to your Vimeo or YouTube video.
-2. Get the *embed* link:
-   - **Vimeo**: Share → Embed → copy the URL inside `src="..."` (looks like
-     `https://player.vimeo.com/video/123456789`)
-   - **YouTube**: Share → Embed → copy the URL inside `src="..."` (looks like
-     `https://www.youtube.com/embed/dQw4w9WgXcQ`)
-3. In `script.js`, find the matching project in the `PROJECTS` array and paste
-   the link as the `embedUrl` value, replacing `null`. Update `title`, `role`,
-   and `desc` too.
+## 2. Deploy on Vercel (free)
 
-**To add a real client logo (replacing a text placeholder):**
-Currently all clients render as text labels in the `CLIENTS` array. If you'd
-rather use logo image files, tell Claude and it'll swap the marquee over to
-images — just have the logo files (PNG/SVG, ideally transparent background) ready.
+1. Go to vercel.com and sign in with your GitHub account.
+2. Click "Add New" → "Project".
+3. Select the repository you just created.
+4. Framework preset: choose **"Other"** (it's a plain static site — no build command,
+   no output directory needed).
+5. Click **Deploy**. Vercel gives you a live URL in about 30 seconds
+   (something like `your-portfolio.vercel.app`).
 
-**To update the stats bar:**
-The three numbers (years, brand partnerships, disciplines) are written directly
-in `index.html` inside the `<section class="stats">` block. Edit the text there
-directly whenever a number changes.
+Every time you push a change to GitHub, Vercel redeploys automatically.
 
-## Deploy (free)
+## Things to swap in before you share the link
 
-1. Create a free account at [github.com](https://github.com)
-2. Create a new repository (e.g. `portfolio-website`)
-3. On the repo page: **Add file → Upload files**, then drag in every file from
-   this folder
-4. Create a free account at [vercel.com](https://vercel.com), signing in with GitHub
-5. **Add New Project** → select your repo → **Deploy**
-6. Vercel gives you a live URL immediately (e.g. `yourname.vercel.app`), and it
-   auto-redeploys every time you edit a file on GitHub.
+- **Portfolio videos**: each project card in `index.html` has `href="#"` and the text
+  "Add your Vimeo/YouTube link" — replace the `href` with your real Vimeo/YouTube URL
+  once you have them, and update the label text.
+- **Project thumbnails**: right now each card uses a colored gradient placeholder
+  (search `project-thumb` in `styles.css`) since no real thumbnails were provided yet.
+  Swap in real screenshots/frames from your videos when ready — happy to help wire
+  those in.
+- **Client logos**: the marquee currently shows client *names* as text. If you get
+  real logo files (SVG/PNG, transparent background), send them over and I'll swap the
+  marquee to use actual logos instead of text.
+- **Contact form**: right now, submitting the form just opens the visitor's email app
+  with your message pre-filled (works with zero backend — fine for a first version).
+  If you'd rather have submissions land straight in an inbox or spreadsheet, the
+  easiest free option is [Formspree](https://formspree.io) — I can wire that in for
+  you in a couple of minutes when you're ready.
+
+## Custom domain (optional, later)
+
+If you buy a domain (e.g. from Namecheap), Vercel's project settings has a "Domains"
+tab where you can point it at your Vercel project — free on Vercel's side, you only
+pay the domain registrar.
