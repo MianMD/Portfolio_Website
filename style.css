@@ -28,3 +28,53 @@ header{width:100%;max-width:none;padding-left:clamp(22px,4vw,72px);padding-right
 /* FINAL logo fixes */
 .brand-item img,.brand-track img,.company-grid img{filter:none !important;opacity:1 !important;mix-blend-mode:normal !important;}
 .company-grid article img[src*="company-dikhade"]{height:96px;max-width:88%;object-fit:contain;}
+
+
+/* FINAL: unify Brands and Companies section heading system */
+.brands-heading{
+  text-align:left !important;
+  margin:0 0 30px !important;
+  max-width:none !important;
+}
+.brands-heading small{
+  display:block;
+  font-size:10px !important;
+  font-weight:400 !important;
+  letter-spacing:2px !important;
+  color:var(--t) !important;
+  margin:0 0 10px !important;
+}
+.brands-heading h2{
+  font-size:clamp(34px,4vw,58px) !important;
+  font-weight:700 !important;
+  line-height:1.1 !important;
+  letter-spacing:normal !important;
+  color:var(--t) !important;
+  margin:10px 0 !important;
+}
+/* Company identity is always centered under its logo */
+.company-grid article{
+  text-align:center !important;
+  align-items:center !important;
+}
+.company-grid article img{
+  display:block;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.company-grid article h3,
+.company-grid article p{
+  width:100%;
+  text-align:center !important;
+}
+/* DikhaDe asset uses a URL-safe filename in the final package */
+.company-grid article img[src*="Company DikhaDe Logo"]{
+  height:96px !important;
+  max-width:88% !important;
+  object-fit:contain !important;
+  filter:none !important;
+  opacity:1 !important;
+}
+@media(max-width:620px){
+  .brands-heading h2{font-size:34px !important;}
+}
