@@ -1,0 +1,20 @@
+PORTFOLIO UPDATE
+
+1. Extract the project and replace index.html, style.css, script.js and assets.
+2. Keep all files from assets/tools; tool logos are included locally.
+3. Add your actual CV at assets/CV.pdf (capital CV, lowercase .pdf).
+   The uploaded ZIP did not include a CV. No placeholder CV has been added.
+   If your file has a different name or extension, change the CV link in index.html.
+4. Redeploy your Vercel project after replacing the files.
+
+ALL FILTER: FIRST FOUR VIDEOS
+1. Islamabad United - first existing Sports video (Vimeo 1232971720)
+2. Motion Graphics - second existing video (Vimeo 1232952849)
+3. AI Creative - first existing video (Vimeo 1232958492)
+4. CGI / 3D - first existing video (Vimeo 1232954562)
+
+Category filters retain their original video order. All 17 original videos remain.
+Header: WhatsApp, phone and email shortcuts.
+Footer: existing social/contact links plus Download CV.
+Opening: short title/portrait entrance and a soft light sweep.
+Scroll: subtle one-time reveals. Reduced-motion preferences are respected.
