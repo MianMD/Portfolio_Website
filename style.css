@@ -24,7 +24,6 @@ header{width:100%;max-width:none;padding-left:clamp(22px,4vw,72px);padding-right
 @media(max-width:1200px){.video-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:900px){.video-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.contact{grid-template-columns:1fr}.contact-form{justify-self:start;max-width:none}}
 @media(max-width:620px){.hero,.brands,.companies,.work,.services,.about,.contact,footer{width:100%;padding-left:20px;padding-right:20px}.video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.contact-form{grid-template-columns:1fr}.contact-form label:last-of-type{grid-column:auto}}
-\n\n/* Brand slider prominence + labels */\n.brands{padding-top:64px!important;padding-bottom:58px!important;background:linear-gradient(180deg,rgba(50,200,255,.025),transparent 60%)}\n.brands-heading{text-align:center;margin:0 auto 34px}\n.brands-heading small{display:block;font-size:11px;font-weight:800;letter-spacing:3.5px;color:var(--c);margin-bottom:9px}\n.brands-heading h2{margin:0;font-size:clamp(34px,3.5vw,58px);line-height:1.05;letter-spacing:-2px;color:var(--t)}\n.brand-marquee{margin-top:0!important;padding:8px 0 12px}\n.brand-track{gap:clamp(24px,3vw,48px)!important}\n.brand-item{width:clamp(150px,13vw,210px);min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:18px 16px;border:1px solid #223843;border-radius:12px;background:#09161d;flex:0 0 auto}\n.brand-item img{width:clamp(100px,9vw,150px)!important;height:72px!important;object-fit:contain;filter:none!important;opacity:1!important}\n.brand-item span{display:block;text-align:center;font-size:13px;font-weight:700;color:#e9f1f5;white-space:nowrap}\n@media(max-width:620px){.brands{padding-top:46px!important;padding-bottom:42px!important}.brands-heading{margin-bottom:25px}.brands-heading h2{font-size:34px;letter-spacing:-1.4px}.brand-item{width:145px;min-height:135px;padding:14px 12px}.brand-item img{width:105px!important;height:62px!important}.brand-item span{font-size:12px}}\n
 /* FINAL logo fixes */
 .brand-item img,.brand-track img,.company-grid img{filter:none !important;opacity:1 !important;mix-blend-mode:normal !important;}
 .company-grid article img[src*="company-dikhade"]{height:96px;max-width:88%;object-fit:contain;}
@@ -77,4 +76,74 @@ header{width:100%;max-width:none;padding-left:clamp(22px,4vw,72px);padding-right
 }
 @media(max-width:620px){
   .brands-heading h2{font-size:34px !important;}
+}
+
+/* Rounded brand logo cards, with names centered directly underneath. */
+.brands > .brands-heading { display:block; }
+.brands > .brand-marquee { display:block; margin-top:0; overflow:hidden; }
+.brand-track { --brand-gap:clamp(24px,3vw,48px); gap:var(--brand-gap); }
+.brand-item {
+  flex:0 0 auto;
+  width:clamp(150px,13vw,210px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+}
+.brand-logo {
+  width:100%;
+  height:120px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  border:1px solid #223843;
+  border-radius:16px;
+  background:#09161d;
+  overflow:hidden;
+}
+.brand-logo img {
+  display:block;
+  width:100%;
+  max-width:150px;
+  height:76px;
+  object-fit:contain;
+}
+.brand-item > span {
+  display:block;
+  width:100%;
+  text-align:center;
+  color:var(--t);
+  font-size:13px;
+  font-weight:700;
+  line-height:1.5;
+}
+@keyframes brandMove { to { transform:translateX(calc(-50% - var(--brand-gap) / 2)); } }
+.social-footer { padding-top:28px; padding-bottom:28px; display:flex; justify-content:center; }
+.social-links { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:16px; }
+.social-link {
+  width:88px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:14px 10px;
+  border:1px solid var(--l);
+  border-radius:12px;
+  color:var(--m);
+  font-size:11px;
+  font-weight:600;
+  transition:color .2s,border-color .2s,background-color .2s;
+}
+.social-link svg { width:24px; height:24px; }
+.social-link[href]:hover, .social-link[href]:focus-visible { color:var(--c); border-color:var(--c); background:#0b1f2a; }
+.social-link:focus-visible { outline:2px solid var(--c); outline-offset:4px; }
+@media(max-width:620px) {
+  .brand-item { width:145px; }
+  .brand-logo { height:108px; padding:16px; }
+  .brand-logo img { height:66px; }
+  .brand-item > span { font-size:12px; }
+  .social-links { gap:9px; }
+  .social-link { width:76px; padding:12px 8px; }
 }
