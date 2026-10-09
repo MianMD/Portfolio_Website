@@ -1,5 +1,6 @@
 const buttons = document.querySelectorAll('.filters button');
 const cards = document.querySelectorAll('.video-card');
+const workSection = document.querySelector('.work');
 buttons.forEach(button => {
   button.onclick = () => {
     buttons.forEach(item => {
@@ -9,6 +10,7 @@ buttons.forEach(button => {
     button.classList.add('on');
     button.setAttribute('aria-pressed', 'true');
     const filter = button.dataset.f;
+    workSection.dataset.activeFilter = filter;
     cards.forEach(card => {
       card.classList.toggle('hide', filter !== 'all' && !card.dataset.c.split(' ').includes(filter));
       // Keep the featured mix in All and the original sequence inside each category.
@@ -17,6 +19,58 @@ buttons.forEach(button => {
     });
   };
 });
+
+// Mobile previews play the original Vimeo video in a focused, full-height player.
+// Desktop keeps the existing in-page embeds; no video is replaced or cropped.
+const videoDialog = document.querySelector('.video-dialog');
+const playerContainer = document.querySelector('.video-dialog-player');
+const playerTitle = document.getElementById('video-dialog-title');
+const mobileLayout = window.matchMedia('(max-width: 900px)');
+const showAll = document.querySelector('.mobile-show-all');
+
+if (videoDialog && typeof videoDialog.showModal === 'function') {
+  document.documentElement.classList.add('mobile-enhanced');
+
+  showAll.addEventListener('click', () => {
+    const expanded = workSection.classList.toggle('is-expanded');
+    showAll.setAttribute('aria-expanded', String(expanded));
+    showAll.textContent = expanded ? 'Show featured videos ↑' : 'View all 17 videos →';
+    if (!expanded) workSection.scrollIntoView({ block: 'start', behavior: 'instant' });
+  });
+
+  document.querySelectorAll('.mobile-video-preview').forEach(button => {
+    button.addEventListener('click', () => {
+      if (!mobileLayout.matches) return;
+      const card = button.closest('.video-card');
+      const player = document.createElement('iframe');
+      const source = new URL(card.querySelector('iframe').src);
+      source.searchParams.set('autoplay', '1');
+      source.searchParams.set('playsinline', '1');
+      player.src = source.toString();
+      player.title = card.dataset.videoTitle;
+      player.allow = 'autoplay; fullscreen; picture-in-picture';
+      player.allowFullscreen = true;
+      playerTitle.textContent = card.dataset.videoTitle;
+      playerContainer.replaceChildren(player);
+      videoDialog.showModal();
+      document.body.classList.add('video-open');
+    });
+  });
+
+  document.querySelector('.video-dialog-close').addEventListener('click', () => videoDialog.close());
+  videoDialog.addEventListener('click', event => {
+    if (event.target !== videoDialog) return;
+    const box = videoDialog.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) videoDialog.close();
+  });
+  videoDialog.addEventListener('close', () => {
+    playerContainer.replaceChildren();
+    document.body.classList.remove('video-open');
+  });
+  mobileLayout.addEventListener('change', event => {
+    if (!event.matches && videoDialog.open) videoDialog.close();
+  });
+}
 
 const menu = document.querySelector('.menu');
 const nav = document.querySelector('header nav');
@@ -45,7 +99,7 @@ if (!motionPreference.matches && 'IntersectionObserver' in window) {
   const revealTargets = document.querySelectorAll(
     '.brands-heading, .companies .title, .company-grid article, .work .title, ' +
     '.filters, .video-card, .services > small, .service article, .about, ' +
-    '.contact-copy, .contact-form, .social-footer'
+    '.contact-copy, .contact-form, .social-footer, .mobile-project-cta'
   );
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

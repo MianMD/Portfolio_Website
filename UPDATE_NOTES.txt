@@ -1,20 +1,30 @@
-PORTFOLIO UPDATE
+FINAL RESPONSIVE PORTFOLIO UPDATE
 
-1. Extract the project and replace index.html, style.css, script.js and assets.
-2. Keep all files from assets/tools; tool logos are included locally.
-3. Add your actual CV at assets/CV.pdf (capital CV, lowercase .pdf).
-   The uploaded ZIP did not include a CV. No placeholder CV has been added.
-   If your file has a different name or extension, change the CV link in index.html.
-4. Redeploy your Vercel project after replacing the files.
+Upload/replace ALL project files, including the new responsive.css and
+assets/video-thumbnails folder, then redeploy your Vercel project.
 
-ALL FILTER: FIRST FOUR VIDEOS
-1. Islamabad United - first existing Sports video (Vimeo 1232971720)
-2. Motion Graphics - second existing video (Vimeo 1232952849)
-3. AI Creative - first existing video (Vimeo 1232958492)
-4. CGI / 3D - first existing video (Vimeo 1232954562)
+MOBILE / TABLET (900px and below)
+- Portrait-first hero with the name and main action over the lower image.
+- Text-only tool names: Adobe Premiere Pro, Adobe After Effects, Blender, Unity, CapCut.
+- Selected Work follows the hero.
+- One large featured card and three smaller cards, in your approved order.
+- View all 17 videos reveals the remaining projects.
+- Category filters show their full category in the original order.
+- Tap a project preview to play its original video in a closable portrait player.
+- Compact contact / CV panel, followed by the remaining site sections.
 
-Category filters retain their original video order. All 17 original videos remain.
-Header: WhatsApp, phone and email shortcuts.
-Footer: existing social/contact links plus Download CV.
-Opening: short title/portrait entrance and a soft light sweep.
-Scroll: subtle one-time reveals. Reduced-motion preferences are respected.
+DESKTOP
+- Existing desktop structure and all 17 Vimeo embeds retained.
+- Tool names replace the logo strip.
+- Portrait sides and bottom fade into the surrounding background.
+
+CV
+Keep your actual PDF at assets/CV.pdf (capital CV, lowercase .pdf).
+The supplied archive did not include that file. The download buttons are wired
+to that exact path; no placeholder CV is included.
+
+FEATURED ORDER
+1. Islamabad United / first existing Sports video (1232971720)
+2. Second existing Motion Graphics video (1232952849)
+3. First existing AI Creative video (1232958492)
+4. First existing CGI / 3D video (1232954562)
